@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.body {
+    min-height: 100vh;
+    background: url("Images/background2.jpg") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#scoreBox, #highscoreBox {
+    position: absolute;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+    font-size: 40px;
+    font-weight: 700;
+    right: 220px;
+}
+
+#scoreBox {
+    top: 20px;
+    left: 1080px;
+}
+
+#highscoreBox {
+    top: 80px;
+    
+}
+
+@media (max-width: 768px) {
+    #scoreBox, #highscoreBox {
+        right: 20px;
+        font-size: 28px;
+    }
+}
+
+
+#board {
+    background: rgba(50, 50, 50, 0.85);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    height: 92vmin;
+    width: 90vmin;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+    margin-right: 120px;
+}
+
+.head {
+    background: linear-gradient(135deg, #ff4e50, #f9d423);
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px #fff;
+    transform: scale(1.1);
+    border-radius: 50%;
+}
+
+.snake {
+    background: #6a0dad;
+    border: 1px solid #fff;
+    box-shadow: 0 0 3px #fff;
+    border-radius: 50%;
+}
+
+.food {
+    background: radial-gradient(circle, #ffeb3b, #f57f17);
+    border: 1px solid #000;
+    box-shadow: 0 0 4px #000;
+    border-radius: 50%;
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
